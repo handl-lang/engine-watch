@@ -1,0 +1,18 @@
+[package]
+name = "hnl-engine-watch"
+version = "0.1.0"
+edition = "2024"
+description = "Cross-platform filesystem watcher: typed events, filters, and debounce batching (T-128 phase 1)."
+license = "MIT"
+repository = "https://github.com/handl-lang/engine-watch"
+readme = "README.md"
+keywords = ["handl", "engine", "filesystem", "watch", "notify"]
+categories = ["filesystem", "development-tools"]
+# Git-install only: https://github.com/handl-lang/engine-watch (no crates.io).
+publish = false
+
+[dependencies]
+# Cross-platform fs events (inotify / kqueue / ReadDirectoryChangesW).
+# 8.2.2 is the newest 8.x stable (released 2026-11-08); 9.0.0 is <7 days old
+# and stays un-pinned until it ages.
+notify = "8.2"
