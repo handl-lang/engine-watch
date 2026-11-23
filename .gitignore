@@ -10,3 +10,4 @@ xtask/target/
 
 # xtask is a standalone crate; its lock is local state.
 /xtask/Cargo.lock
+/.cargo/
