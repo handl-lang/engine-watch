@@ -35,7 +35,7 @@ later phase and does not live here.
 - Backend is `notify` `8.2` — the only dependency. inotify on Linux,
   FSEvents/kqueue/ReadDirectoryChangesW elsewhere. Do not hand-roll
   platform backends; extend the typed layer (`event.rs`) instead.
-- `publish = false` — git-install only, like every `engine-*` crate.
+- `publish = false` — git-install only, like every `tool-*`/`exec-*` crate.
 - Crate name is `hnl-tool-watch`; repo is `handl-lang/tool-watch`.
 - `WatchOptions::default()`/`new()` is **recursive** — `bool` fields need an
   explicit `Default` impl, `#[derive(Default)]` silently flips it to shallow.
