@@ -5,7 +5,7 @@ use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::time::{Duration, Instant};
 
-use hnl_engine_watch::{Error, EventKind, Filter, FsEvent, WatchOptions, Watcher};
+use hnl_tool_watch::{Error, EventKind, Filter, FsEvent, WatchOptions, Watcher};
 
 /// Minimal tempdir (no dev-deps): unique dir under `std::env::temp_dir`,
 /// removed on drop.
@@ -16,7 +16,7 @@ impl TempDir {
         static N: AtomicU64 = AtomicU64::new(0);
         let n = N.fetch_add(1, Ordering::Relaxed);
         let path =
-            std::env::temp_dir().join(format!("hnl-engine-watch-test-{}-{n}", std::process::id()));
+            std::env::temp_dir().join(format!("hnl-tool-watch-test-{}-{n}", std::process::id()));
         fs::create_dir_all(&path).unwrap();
         TempDir(path)
     }

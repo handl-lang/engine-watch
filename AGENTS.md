@@ -12,13 +12,13 @@
 
 <!-- /myco:agent-awareness -->
 
-# Agent guide — engine-watch
+# Agent guide — tool-watch
 
-`hnl-engine-watch` — the filesystem-watch engine: a `Watcher` that watches
+`hnl-tool-watch` — the filesystem-watch engine: a `Watcher` that watches
 paths (recursively by default) and yields typed `FsEvent`s
 (`Create`/`Modify`/`Delete`/`Rename`/`Other`), with `WatchOptions`/`Filter`
 predicates applied inside the backend handler and a `Debouncer` for
-quiescence-window batching. Consumers: `engine-test --watch`, `ext-*`, and
+quiescence-window batching. Consumers: `tool-test --watch`, `ext-*`, and
 future dev servers. Phase 1 of T-128 — the `.hnl` `lib-watch` binding is a
 later phase and does not live here.
 
@@ -36,7 +36,7 @@ later phase and does not live here.
   FSEvents/kqueue/ReadDirectoryChangesW elsewhere. Do not hand-roll
   platform backends; extend the typed layer (`event.rs`) instead.
 - `publish = false` — git-install only, like every `engine-*` crate.
-- Crate name is `hnl-engine-watch`; repo is `handl-lang/engine-watch`.
+- Crate name is `hnl-tool-watch`; repo is `handl-lang/tool-watch`.
 - `WatchOptions::default()`/`new()` is **recursive** — `bool` fields need an
   explicit `Default` impl, `#[derive(Default)]` silently flips it to shallow.
 

@@ -1,10 +1,10 @@
-# engine-watch
+# tool-watch
 
-`hnl-engine-watch` — a cross-platform filesystem watcher: typed events,
+`hnl-tool-watch` — a cross-platform filesystem watcher: typed events,
 filters, and debounce batching.
 
 An `engine-*` crate: the watch operation implemented generically — consumers
-(`engine-test --watch`, `ext-*` integrations, dev servers) get one typed
+(`tool-test --watch`, `ext-*` integrations, dev servers) get one typed
 event stream regardless of whether the OS backend is inotify, FSEvents,
 kqueue, or ReadDirectoryChangesW.
 

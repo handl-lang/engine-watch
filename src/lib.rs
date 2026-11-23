@@ -1,11 +1,11 @@
-//! `hnl-engine-watch` — a cross-platform filesystem watcher for the handl
+//! `hnl-tool-watch` — a cross-platform filesystem watcher for the handl
 //! toolchain.
 //!
 //! Phase 1 of the watch story (T-128): the Rust engine only. The `.hnl`
 //! `lib-watch` binding that exposes this to Handl programs lands later.
 //!
 //! ```no_run
-//! use hnl_engine_watch::{Watcher, WatchOptions, Filter};
+//! use hnl_tool_watch::{Watcher, WatchOptions, Filter};
 //! use std::time::Duration;
 //!
 //! let watcher = Watcher::watch_with(
