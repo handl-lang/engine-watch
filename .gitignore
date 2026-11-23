@@ -7,3 +7,6 @@
 # myco worktree mount point (created by `myco init`)
 project/
 xtask/target/
+
+# xtask is a standalone crate; its lock is local state.
+/xtask/Cargo.lock
