@@ -47,4 +47,4 @@ cargo xtask gate     # fmt --check → clippy -D warnings → test → doc
 cargo test           # the suite
 ```
 
-`ci.sh` is the bupha gate entry (`bash ci.sh` or `ci.sh fmt|clippy|test|doc`).
+`workflows/gate.yaml` is the bupha gate entry (the handl-gates campaign).
