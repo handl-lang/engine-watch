@@ -50,7 +50,7 @@ cargo xtask gate        # fmt --check → clippy -D warnings → test → doc
 ```
 
 `cargo xtask` wraps the repo's `xtask/` crate (`fmt`, `clippy`, `test`, `doc`,
-`check`, `gate`); `ci.sh` is the same gate entry for the bupha shell runner.
+`check`, `gate`); `workflows/gate.yaml` is the gate entry (bupha runs the handl-gates campaign).
 
 ## License
 
