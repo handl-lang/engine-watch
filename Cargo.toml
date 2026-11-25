@@ -2,6 +2,7 @@
 name = "hnl-tool-watch"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85"
 description = "Cross-platform filesystem watcher: typed events, filters, and debounce batching (T-128 phase 1)."
 license = "MIT"
 repository = "https://github.com/handl-lang/tool-watch"
